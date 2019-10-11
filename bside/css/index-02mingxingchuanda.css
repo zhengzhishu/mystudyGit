@@ -1,0 +1,93 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+header {
+	width: 100%;
+	height: 86px;
+}
+section{
+
+}
+#bigbox1,#bigbox2,#bigbox3{
+/*	border: 1px solid yellow;*/
+	width: 94%;
+/*	height: 1440px;*/
+    margin:auto;
+	overflow: hidden;
+	padding-right: 0px;
+	padding-left: 0px;
+	}
+.boxsmall{
+	height: 20%;
+	
+	height: 260px;
+	box-sizing: border-box;
+	background-size: 100% 100%;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+#box1-2,#box2-1{
+
+}
+.col-lg-4{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.parent{
+	float: left;
+	width: 33.3%;
+	height: 533px;
+}
+.son{
+	float: left;
+	width: 48%;
+	height: 258px;
+	background-size: 100% 100%;
+	margin-right: 8px;
+	margin-bottom: 8px;
+	box-sizing: border-box;
+}
+#footbox{
+	padding-top: 50px;
+}
+
+@media (max-width: 958px) {
+
+.parent{
+	width: 100%;
+}
+.son{
+	width: 48%;
+	margin-right: 6px;
+	margin-bottom: 8px;
+	/*transform: translateX();*/
+	/*transition: all 1s;
+	opacity: 0.5;*/
+}
+	
+}
+/*#box2-1:hover,#box1-3:hover,.son:hover{
+	opacity: 0.5;
+}*/
+#guding_small-01{
+	width: 200px;
+	height: 100px;
+	position: fixed;
+	/*margin-left: 50%-50px;*/
+	z-index: 9999;
+	top: 100px;
+	border: 1px solid red;
+	text-align: center;
+	
+}
+#beijing01{
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.lunbobox{
+	width: 80%;
+	height:300px;
+	border: 1px solid red; 
+}

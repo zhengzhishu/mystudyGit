@@ -1,0 +1,545 @@
+{
+    "@platforms": ["android", "iPhone", "iPad"],
+    "id": "H521A8BC4",/*应用的标识，创建应用时自动生成，勿手动修改*/
+    "name": "a",/*应用名称，程序桌面图标名称*/
+    "version": {
+        "name": "1.0",/*应用版本名称*/
+        "code": ""
+    },
+    "description": "",/*应用描述信息*/
+    "icons": {
+        "72": "icon.png"
+    },
+    "launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "developer": {
+        "name": "",/*开发者名称*/
+        "email": "",/*开发者邮箱地址*/
+        "url": ""/*开发者个人主页地址*/
+    },
+    "permissions": {
+        "Messaging":{
+        	"description": "短彩邮件插件"
+        },
+        "Cache": {
+            "description": "管理应用缓存"
+        },
+        "Console": {
+            "description": "跟踪调试输出日志"
+        },
+        "Contacts": {
+            "description": "访问系统联系人信息"
+        },
+        "Events": {
+            "description": "应用扩展事件"
+        },
+        "Maps": {
+            "description": "管理地图插件"
+        },
+        "Speech": {
+            "description": "管理语音识别插件"
+        }
+    },
+    "plus": {
+        "splashscreen": {
+            "autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+            "waiting": true/*是否在程序启动界面显示等待雪花，true表示显示，false表示不显示。*/
+        },
+        "popGesture": "close",/*设置应用默认侧滑返回关闭Webview窗口，"none"为无侧滑返回功能，"hide"为侧滑隐藏Webview窗口。参考http://ask.dcloud.net.cn/article/102*/
+        "runmode": "normal",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+        "signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
+        "distribute": {
+            "apple": {
+                "appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+                "mobileprovision": "",/*iOS应用打包配置文件*/
+                "password": "",/*iOS应用打包个人证书导入密码*/
+                "p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+                "devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+                "frameworks":[
+                ]/*调用Native.js调用原生Objective-c API需要引用的FrameWork，如需调用GameCenter，则添加"GameKit.framework"*/
+            },
+            "google": {
+                "packagename": "",/*Android应用包名，如io.dcloud.HelloH5*/
+                "keystore": "",/*Android应用打包使用的密钥库文件*/
+                "password": "",/*Android应用打包使用密钥库中证书的密码*/
+                "aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
+               "permissions": ["<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>","<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"]
+				/*使用Native.js调用原生安卓API需要使用到的系统权限*/
+            },
+            "orientation": [
+                "portrait-primary"
+            ],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+            "icons": {
+                "ios": {
+                    "prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+                    "auto": "", /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+                    "iphone": {
+                        "normal": "", /*iPhone3/3GS程序图标，分辨率：57x57*/
+                        "retina": "", /*iPhone4程序图标，分辨率：114x114*/
+                        "retina7": "", /*iPhone4S/5/6程序图标，分辨率：120x120*/
+			"retina8": "", /*iPhone6 Plus程序图标，分辨率：180x180*/
+                        "spotlight-normal": "", /*iPhone3/3GS Spotlight搜索程序图标，分辨率：29x29*/
+                        "spotlight-retina": "", /*iPhone4 Spotlight搜索程序图标，分辨率：58x58*/
+                        "spotlight-retina7": "", /*iPhone4S/5/6 Spotlight搜索程序图标，分辨率：80x80*/
+                        "settings-normal": "", /*iPhone4设置页面程序图标，分辨率：29x29*/
+                        "settings-retina": "", /*iPhone4S/5/6设置页面程序图标，分辨率：58x58*/
+			"settings-retina8": "" /*iPhone6Plus设置页面程序图标，分辨率：87x87*/
+                    },
+                    "ipad": {
+                        "normal": "", /*iPad普通屏幕程序图标，分辨率：72x72*/
+                        "retina": "", /*iPad高分屏程序图标，分辨率：144x144*/
+                        "normal7": "", /*iPad iOS7程序图标，分辨率：76x76*/
+                        "retina7": "", /*iPad iOS7高分屏程序图标，分辨率：152x152*/
+                        "spotlight-normal": "", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+                        "spotlight-retina": "", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+                        "spotlight-normal7": "",/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
+                        "spotlight-retina7": "",/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+                        "settings-normal": "",/*iPad设置页面程序图标，分辨率：29x29*/
+                        "settings-retina": "" /*iPad高分屏设置页面程序图标，分辨率：58x58*/
+                    }
+                },
+                "android": {
+                    "mdpi": "", /*普通屏程序图标，分辨率：48x48*/
+                    "ldpi": "", /*大屏程序图标，分辨率：48x48*/
+                    "hdpi": "", /*高分屏程序图标，分辨率：72x72*/
+                    "xhdpi": "",/*720P高分屏程序图标，分辨率：96x96*/
+                    "xxhdpi": ""/*1080P 高分屏程序图标，分辨率：144x144*/
+                }
+            },
+            "splashscreen": {
+                "ios": {
+                    "iphone": {
+                        "default": "", /*iPhone3启动图片选，分辨率：320x480*/
+                        "retina35": "",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+                        "retina40": "",/*4.0 英寸设备(iPhone5/iPhone5s)启动图片，分辨率：640x1136*/
+                        "retina47": "",/*4.7 英寸设备(iPhone6)启动图片，分辨率：750x1334*/
+                        "retina55": "",/*5.5 英寸设备(iPhone6 Plus)启动图片，分辨率：1242x2208*/
+                        "retina55l": ""/*5.5 英寸设备(iPhone6 Plus)横屏启动图片，分辨率：2208x1242*/
+                    },
+                    "ipad": {
+                        "portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
+                        "portrait-retina": "",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+                        "landscape": "", /*iPad横屏启动图片，分辨率：1024x748*/
+                        "landscape-retina": "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+                        "portrait7": "", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+                        "portrait-retina7": "",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+                        "landscape7": "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+                        "landscape-retina7": ""/*iPad iOS7高分屏横屏启动图片，分辨率：2048x1536*/
+                    }
+                },
+                "android": {
+                    "mdpi": "", /*普通屏启动图片，分辨率：240x282*/
+                    "ldpi": "", /*大屏启动图片，分辨率：320x442*/
+                    "hdpi": "", /*高分屏启动图片，分辨率：480x762*/
+                    "xhdpi": "", /*720P高分屏启动图片，分辨率：720x1242*/
+                    "xxhdpi": ""/*1080P高分屏启动图片，分辨率：1080x1882*/
+                }
+            }
+        }
+    },
+	"dependencies": {
+		"pages": {
+			"index.html": {
+				"resources": [],
+				"refer": [
+					"3.html",
+					"index-04huiyuan.html",
+					"index-02mingxing.html"
+				],
+				"priority": 0
+			},
+			"index-04huiyuan.html": {
+				"resources": [
+					"img-huiyuan/未标题-132.png",
+					"img-huiyuan/未标题-1122.png",
+					"img-huiyuan/未标题-001.png"
+				],
+				"refer": [
+					"index.html"
+				],
+				"priority": 0
+			},
+			"3.html": {
+				"resources": [],
+				"refer": [
+					"index-04huiyuan.html"
+				],
+				"priority": 0
+			},
+			"T.html": {
+				"resources": [],
+				"refer": [
+					"index-02mingxing.html"
+				],
+				"priority": 0
+			},
+			"index-02mingxing.html": {
+				"resources": [],
+				"refer": [
+					"index.html",
+					"index-04huiyuan.html"
+				],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"img-huiyuan/member-benefit-4.png",
+				"img/1_files/5b990b4bb9528.jpg",
+				"img-mingxing/0009.jpg",
+				"img-nvzhuang/013.jpg",
+				"js/T.js",
+				"img/tech-bannersp.jpg",
+				"img/1_files/5bbfe66755af3.jpg",
+				"img/cabinet0509pc.jpg",
+				"img-mingxing/icon-contact.png",
+				"img/nav-listmenu-05.jpg",
+				"js/npm.js",
+				"css/brand story.css",
+				"img/1_files/5bbfe59c8c1cb.jpg",
+				"img/1_files/tech-feature-bg11.jpg",
+				"img/1_files/5bdac9b8c12f5.jpg",
+				"js/index-03nvzhuang.js",
+				"js/bootstrap.min.js",
+				"img/1_files/纽约时装周限量款 - 波司登 畅销全球72国 _ 羽绒服.html",
+				"img/1_files/story-navigator-button.png",
+				"img/h2.jpg",
+				"js/Limited.js",
+				"css/index-01.css",
+				"img/1_files/5b6798de6fa3a.jpg",
+				"img/1_files/story-bottom-bg.png",
+				"img-mingxing/nav-nyfwwear.jpg",
+				"img-mingxing/brand-kv-mask-middle.png",
+				"css/3.css",
+				"fonts/glyphicons-halflings-regular.woff",
+				"img-mingxing/icon-tmall.png",
+				"img-huiyuan/wx-qr.png",
+				"img/1_files/5bbfe6c97021b.jpg",
+				"img/1_files/6.png",
+				"img/1_files/tech-feature-bg12sp.jpg",
+				"img/5b97dd7e9a0eb.jpg",
+				"img/tech-feature-bg11sp.jpg",
+				"img/1_files/5b97e425996af.jpg",
+				"img/nav-listmenu-01_1.jpg",
+				"img/1_files/3.jpg",
+				"css/index04-huiyuan.css",
+				"img/1_files/5bdac94fabb33.jpg",
+				"img/1_files/story2001.jpg",
+				"js/index3.js",
+				"img/1_files/5bdac92bb67d7.jpg",
+				"img-dongtai/dongtai03.jpg",
+				"img/yrkj.css",
+				"img/top-kv-13.jpg",
+				"img/icon-tmall.png",
+				"fonts/glyphicons-halflings-regular.svg",
+				"img/1_files/5bbfe0c711f7a.jpg",
+				"img/1_files/5b990a876e610.jpg",
+				"fonts/glyphicons-halflings-regular.ttf",
+				"img-mingxing/nav-men.jpg",
+				"img/1_files/5bbfe516b23be.jpg",
+				"img-mingxing/icon-weixin.png",
+				"img-nvzhuang/006.jpg",
+				"img-nvzhuang/016.jpg",
+				"js/boy.js",
+				"img/1_files/tech-feature-bg11sp.jpg",
+				"img-mingxing/coordinate-title.png",
+				"css/bootstrap.min.css",
+				"img/nav-listmenu-02.jpg",
+				"img-mingxing/00011.jpg",
+				"img/003.jpg",
+				"img-mingxing/00018.jpg",
+				"img/1_files/5ac0b545cc094.jpg",
+				"img-nvzhuang/nan1.jpg",
+				"img/1_files/tech-bannersp.jpg",
+				"img-mingxing/brand-kv-mask-short.png",
+				"img/1_files/tech-feature-bg12.jpg",
+				"img-mingxing/0001.jpg",
+				"img/1_files/5b990c7f3a411.jpg",
+				"img-mingxing/00012.jpg",
+				"img/1_files/5bbfe4cf2c8dc.jpg",
+				"img/5d3fa42d5a197.jpg",
+				"img-nvzhuang/005.jpg",
+				"img-huiyuan/未标题-1.png",
+				"img-nvzhuang/012.jpg",
+				"css/IndexHead.css",
+				"img-nvzhuang/nan.jpg",
+				"img-mingxing/product-lady-kv.jpg",
+				"js/brand.js",
+				"img-huiyuan/member-level-vip.png",
+				"img/top-kv-11.jpg",
+				"img/1_files/5bdac8715e8ec.jpg",
+				"img-mingxing/nav-menspring2019.jpg",
+				"img-mingxing/nav-womenssport.jpg",
+				"img/1_files/5bdac8f78fd1d.jpg",
+				"img/1_files/5b990ae5ada47.jpg",
+				"img/1_files/story2007-2.jpg",
+				"img/icon-close.png",
+				"img/1_files/5b679c23da410.jpg",
+				"img/heg4-1.jpg",
+				"img-nvzhuang/010.jpg",
+				"img/1_files/story1976.jpg",
+				"img/culture0821.jpg",
+				"img/1_files/year-number-2.png",
+				"css/index-02mingxingchuanda.css",
+				"img/1_files/5b679c701f0de.jpg",
+				"img/1_files/5ac049eb42c27.jpg",
+				"css/bootstrap-theme.min.css",
+				"img/1_files/5b97e3d67abb4.jpg",
+				"img-mingxing/icon-search.png",
+				"img-dongtai/dongtai02.jpg",
+				"img/nav-listmenu-03.jpg",
+				"img/footer-logo-chinabrand.png",
+				"img/1_files/5b990b3a48366.jpg",
+				"img-dongtai/xiegang.png",
+				"img/about_kv.jpg",
+				"img-mingxing/00016.jpg",
+				"img-mingxing/nav-kidswear.jpg",
+				"img/assistant-banner-20180510.jpg",
+				"css/bootstrap.css.map",
+				"img/1_files/5bdac98e0f001.jpg",
+				"img-mingxing/0007.jpg",
+				"img/1_files/5bbfe12e313e8.jpg",
+				"img/kv2.jpg",
+				"img-mingxing/logo.png",
+				"img-huiyuan/未标题-3.png",
+				"img/qrcode-wechat-footer.jpg",
+				"css/bootstrap-theme.css.map",
+				"img-nvzhuang/014.jpg",
+				"img/1_files/year-number-6.png",
+				"img/5d3f86f478aa6.jpg",
+				"img/5d3f9730065f0.jpg",
+				"img/index-img1.jpg",
+				"img/1_files/5bbfded83e906.jpg",
+				"img/theme-bright-logo.png",
+				"img/h3 (1).jpg",
+				"img/1_files/11.png",
+				"img/1_files/2.png",
+				"js/index-01.js",
+				"img/1_files/year-number-8.png",
+				"img/top-kv-12.jpg",
+				"img/5d40142cbdd70.jpg",
+				"img/s5d415507328d2.jpg",
+				"css/bootstrap-theme.css",
+				"img/kv1.jpg",
+				"img/1_files/story1995-2.jpg",
+				"img-mingxing/00013.jpg",
+				"img/1_files/5.png",
+				"js/index-02mingxing.js",
+				"img-huiyuan/member-benefit-5.png",
+				"img/1_files/5bdac816c8328.jpg",
+				"img/1_files/5b990cc9097e3.jpg",
+				"img/1_files/5bbfe63ef1087.jpg",
+				"img/1920x860-2018doubleq.jpg",
+				"img/heg3.jpg",
+				"img-nvzhuang/021.jpg",
+				"img/icon-weibo.png",
+				"fonts/glyphicons-halflings-regular.woff2",
+				"img/1_files/9.jpg",
+				"img/1_files/story2011-3.jpg",
+				"js/new_file.js",
+				"img/assistant-icon-weibo.png",
+				"img-huiyuan/bg-member.jpg",
+				"img/assistant-icon-02.png",
+				"js/girl.js",
+				"img/1_files/story1998.jpg",
+				"img/1_files/year-number-0.png",
+				"css/index-01pinpaidongtai.css",
+				"img-mingxing/arrow-prev.svg",
+				"img/1_files/5b990cdf7e26d.jpg",
+				"index-03nvzhuangnew.html",
+				"img/1_files/story1999.jpg",
+				"css/Limited money.css",
+				"index-01shuju.html",
+				"img-mingxing/icon-close.png",
+				"img/top-kv-video1.jpg",
+				"img-mingxing/5ac0b57db3bd3.jpg",
+				"img/1_files/5bbfe5c5cce89.jpg",
+				"img/1_files/story-banner.jpg",
+				"img/1_files/story2006.jpg",
+				"img/1_files/5b990c341e3cd.jpg",
+				"img/guohuov3-pc.jpg",
+				"img/1_files/5b679c4fec621.jpg",
+				"img/1_files/5b990c1818f17.jpg",
+				"img-dongtai/bgslash-d.png",
+				"img-mingxing/0008.jpg",
+				"img-huiyuan/member-level-gold.png",
+				"img/002.jpg",
+				"img-mingxing/0006.jpg",
+				"img-nvzhuang/015.jpg",
+				"img/top-tech-kv.jpg",
+				"img/1_files/story2014-3.jpg",
+				"img-huiyuan/member-benefit-1.png",
+				"img/1_files/tech-banner.jpg",
+				"js/3.js",
+				"css/base.css",
+				"js/index-01pinpaidongtai.js",
+				"img-mingxing/0005.jpg",
+				"img/5d38424568226.jpg",
+				"img-mingxing/5ac0b569e9192.jpg",
+				"img-huiyuan/wx-qrcode-large.jpg",
+				"css/xiangying1.css",
+				"js/IndexHead.js",
+				"img/1_files/5b990cb19997b.jpg",
+				"img-mingxing/nav-brandnews.jpg",
+				"img/1_files/5b990bdd48c5c.jpg",
+				"img-mingxing/0003.jpg",
+				"img/1_files/5bbfe11d9be76.jpg",
+				"img/qrcode-wechat-top.png",
+				"03-shujunvzhuangJZ.html",
+				"img/1_files/5bbfe4d962135.jpg",
+				"img/1_files/year-number-4.png",
+				"img/001.jpg",
+				"img/1_files/5bbfe0dd1eb34.jpg",
+				"fonts/glyphicons-halflings-regular.eot",
+				"img-mingxing/nav-womensurban.jpg",
+				"img/1_files/5b990afe7c267.jpg",
+				"img/heg6_1.jpg",
+				"img-nvzhuang/009.jpg",
+				"img/1920-860banner-v5.jpg",
+				"img-mingxing/00015.jpg",
+				"img/1_files/story2013.jpg",
+				"css/bootstrap.min.css.map",
+				"img-mingxing/bgslash-d.png",
+				"img/1_files/5bbfe13f4995f.jpg",
+				"img/icon-weixin.png",
+				"img-mingxing/nav-womenspring2019.jpg",
+				"img/1_files/story2018-2.jpg",
+				"JZ.html",
+				"img/1_files/5bdac885e367b.jpg",
+				"img-mingxing/5b48c6ae7bf8d.jpg",
+				"img/1_files/5bbfe0f41d4ad.jpg",
+				"img/heg5.jpg",
+				"img/1_files/5b48c69cc7138.jpg",
+				"img-mingxing/nav-brandstory.jpg",
+				"img-huiyuan/未标题-2.png",
+				"img/1_files/story1995-1.jpg",
+				"img-nvzhuang/nv1.jpg",
+				"img/5d3f971cc39f7.jpg",
+				"img-nvzhuang/020.jpg",
+				"img/1_files/5b990b59c2d10.jpg",
+				"img/1_files/5b990b095f52f.jpg",
+				"img-nvzhuang/001.jpg",
+				"boy.html",
+				"img/1_files/5b990c680186d.jpg",
+				"img-huiyuan/member-benefit-2.png",
+				"img/1_files/brand-story-mask-middle (1).png",
+				"img/footer-logo-big.png",
+				"img/1_files/story2014-2.jpg",
+				"img-mingxing/dot.png",
+				"img-huiyuan/left3.jpg",
+				"img-mingxing/nav-designwear.jpg",
+				"img/hot-product-title.png",
+				"img-mingxing/00010.jpg",
+				"img/1_files/5bdac83e94d28.jpg",
+				"img/1_files/5b990c4ca1fc6.jpg",
+				"img/coordinate-title.png",
+				"img-huiyuan/left2.jpg",
+				"img-mingxing/icon-nav.png",
+				"img/5d3fa43d49402.jpg",
+				"img/assistant-icon-03.png",
+				"img-nvzhuang/003.jpg",
+				"img/top-kv-15.jpg",
+				"img-nvzhuang/008.jpg",
+				"js/myfunction.js",
+				"img/5d3f873909fd3.jpg",
+				"img/heg2.jpg",
+				"js/bootstrap.js",
+				"img-nvzhuang/019.jpg",
+				"img/logo.png",
+				"img/5d3f92ca8d9e4.jpg",
+				"img-nvzhuang/002.jpg",
+				"img/index-img2.jpg",
+				"img/1_files/story2007-1.jpg",
+				"img/1_files/5bbfe6901df81.jpg",
+				"img/1920-x-860.jpg",
+				"img-mingxing/0004.jpg",
+				"img/1_files/5bdac970d45b2.jpg",
+				"img/assistant-icon-wechat.png",
+				"img/1_files/story2018-1.jpg",
+				"img-nvzhuang/018.jpg",
+				"img/download.png",
+				"img/5ac04e20de1f3.jpg",
+				"img/1_files/5b679c3a995ae.jpg",
+				"img/1_files/bgslash-d.png",
+				"img/1_files/1.jpg",
+				"img-mingxing/icon-weixin-gold.png",
+				"img/nav-listmenu-04.jpg",
+				"css/bootstrap.css",
+				"img/1_files/5bbfe60d5359a.jpg",
+				"js/jquery-1.12.4.js",
+				"img/heg6.jpg",
+				"img/1_files/4.png",
+				"img/1_files/5bdac7cda1943.jpg",
+				"img-dongtai/icon-weibo.png",
+				"img/1_files/year-number-3.png",
+				"img/1_files/1.png",
+				"img/1_files/5bdac859bcb02.jpg",
+				"Limited money1.html",
+				"img/nav-listmenu-06.jpg",
+				"img/1_files/5bbfe520aa579.jpg",
+				"img-huiyuan/left1.jpg",
+				"img/1_files/5bbfe0933a5b3.jpg",
+				"img/1_files/5b97dd7aac361.jpg",
+				"img/1_files/story2014-1.jpg",
+				"img/1_files/5b679937a2ee3.jpg",
+				"img-mingxing/nav-menssport.jpg",
+				"img/1_files/year-number-7.png",
+				"img/btn-go-top.jpg",
+				"img-huiyuan/member-benefit-3.png",
+				"img/1_files/3.png",
+				"img-nvzhuang/017.jpg",
+				"img-nvzhuang/011.jpg",
+				"css/bootstrap-theme.min.css.map",
+				"JT.html",
+				"js/index04-huiyuan.js",
+				"img-mingxing/icon-weibo-gold.png",
+				"img/1_files/5b990af0db25c.jpg",
+				"img/1_files/5b67991248070.jpg",
+				"img/heg8.jpg",
+				"img/1_files/5b6798ed28755.jpg",
+				"img/h1.jpg",
+				"img/1_files/5b990b14a23f7.jpg",
+				"img-nvzhuang/007.jpg",
+				"img/5d415507328d2.jpg",
+				"img/1_files/year-number-1.png",
+				"img-dongtai/icon-weixin.png",
+				"img/5d3f92d9dab22.jpg",
+				"img/icon-assistant-open.jpg",
+				"css/boy.css",
+				"img/assistant-0822.jpeg",
+				"img/1_files/story2012.jpg",
+				"img-dongtai/icon-tmall.png",
+				"img-mingxing/logo-sp.png",
+				"img-mingxing/0002.jpg",
+				"img/1_files/5bbfe56b5366b.jpg",
+				"css/index-02mingxing.css",
+				"img/assistant-icon-01.png",
+				"img-mingxing/00019.jpg",
+				"img-nvzhuang/004.jpg",
+				"img-mingxing/nav-mensurban.jpg",
+				"img/1_files/year-number-5.png",
+				"img-mingxing/arrow-prev-gray.svg",
+				"img/5d3fa10d98b01.jpg",
+				"img-mingxing/arrow-next.svg",
+				"img/1_files/5bbfe4682185f.jpg",
+				"img/icon-search.png",
+				"img-mingxing/nav-lady.jpg",
+				"brand story.html",
+				"img/theme-dark-logo.png",
+				"img-mingxing/icon-weibo.png",
+				"css/girl.css",
+				"img/1_files/story2011-4.jpg",
+				"img-mingxing/00014.jpg",
+				"img/5d3842547611d.jpg",
+				"img/story-banner.jpg",
+				"img-mingxing/arrow-next-gray.svg",
+				"img-huiyuan/member-level-diamond.png",
+				"img/1_files/5bbfe108148f1.jpg",
+				"index-01pingpaidongtai.html",
+				"img/1_files/year-number-9.png",
+				"css/T.css",
+				"img-dongtai/dongtai01.jpg",
+				"img-mingxing/00017.jpg"
+			]
+		}
+	}
+}

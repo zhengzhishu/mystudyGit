@@ -1,0 +1,136 @@
+*{
+	margin: 0 auto;
+	padding: 0;
+	text-decoration: none;
+	color: white;
+	/*background-color: black;
+	border: 1px solid yellow;*/
+	
+}
+a{
+	text-decoration: none;
+}
+#header_bigbox{
+	display: flex;
+	flex-direction: row;
+	vertical-align: middle;
+	position: absolute;
+	z-index: 1;
+	
+}
+#logobox{
+	flex:1;
+}
+#logobox>a>img{
+	vertical-align: middle;
+	padding-top: 30px;
+	margin-left: 20%;
+}
+#ulbox1>ul{
+	width: 100%;
+	display: flex;
+	border: 1px solid yellow;
+	margin-left: 45%;
+}
+#ulbox1>ul>li{
+	float: left;
+	justify-content: space-around;
+	margin: 30px;
+	list-style: none;
+}
+#ulbox1>ul>li>a{
+	color: white;
+}
+#gudingbox{
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+	#daohangerji01{
+		width: 100%;
+		height: 50px;
+		background-color: rgba(255,255,255,0.5);
+		list-style: none;
+		
+		
+	}
+#daohangerji01>li{
+
+}
+#nav{
+	width: 100%;
+	height: 150px;
+	background-color: rgba(255,255,255,0.5);
+	
+}
+#nav>ul{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	align-items: center;
+}
+#nav>ul>li{
+	height: 60%;
+	float: left;
+	border: 1px solid red;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+}
+#nav>ul>li>a{
+	color: black;
+}
+
+#bodybigbox1{
+	width: 100%;
+	height: 800px;
+	background-image: url(../img/index-img1.jpg);
+	background-size:100% 100%;
+	position: relative;
+}
+#bodybigbox1>a{
+	width: 150px;
+	height: 50px;
+	display: inline-block;
+	color: white;
+	background-color: rgb(26,53,94);
+	position: absolute;
+	left: 60%;
+	top: 68%;
+	text-align: center;
+	line-height: 50px;
+	letter-spacing:0.3em;	
+}
+#bodybigbox2{
+	width: 100%;
+	height: 700px;
+	background-image: url(../img/index-img2.jpg);
+	background-size:100% 100%;
+	/*display: flex;*/
+	margin: auto;
+}
+.bodybigbox2all{
+	width: 50%;
+	height: 300px;
+	border: 1px solid red;
+	
+
+}
+#bodybigbox2-1,#bodybigbox2-2{
+	height: 150px;
+}
+#bodybigbox2-3,#bodybigbox2-4{
+		/*flex-wrap: wrap;*/
+}
+#bodybigbox2Box{
+	width: 60%;
+	height: 100%;
+	padding-top: 10%;
+}
+#bodybigbox2-1{
+	padding: 12px;
+}
+#bodybigbox2-1>img{
+	width: 100%;
+	height: 100%;
+}

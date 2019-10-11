@@ -1,0 +1,293 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+p{
+	padding: 0;
+	margin: 0;
+}
+header {
+	width: 100%;
+	height: 86px;
+}
+
+.bigBox1{
+	width: 100%;
+/*	height: 400px;*/
+	
+	overflow: hidden;
+
+}
+.item{
+	width: 100%;
+}
+/*.lunbo-img{
+	width: 100%;
+	height: 100%;
+}*/
+.bigBox2{
+	width: 100%;
+	height: 50px;
+}
+.bigBox2>div{
+	width: 65%;
+	height: 100%;
+	margin: auto;
+	/*border: 1px solid red;*/
+}
+#box2-1>ul{
+	width: 100%;
+	height:100% ;
+	line-height: 50px;
+	
+}
+#box2-1>ul{
+	width: 100%;
+	height:100% ;
+	line-height: 50px;
+	
+}
+#box2-1>ul>li{
+	float: left;
+	list-style: none;
+	margin-left: 8px;
+}
+
+#box2-1>ul>li>a{
+	color: black;
+	text-decoration: underline;
+}
+.bigBox3{
+	width: 100%;
+	background-image: url(../img-dongtai/bgslash-d.png);
+	overflow: hidden;
+	background-color: white;
+}
+#box3-1{
+	position: relative;
+	top: 50px;
+	width: 65%;
+	margin: auto;
+/*	border: 1px solid red;*/
+	/*overflow: hidden;*/
+	margin-bottom: 120px;
+}
+.box3-1-1{
+	width: 49.5%;
+	height: 40px;
+	background-color:#C0A776 ;
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	line-height: 40px;
+	margin-left: 1%;
+}
+.box3-2-wai{
+	background-color: white;
+	margin: auto;
+	overflow: hidden;
+	width: 65%;
+	margin-top: 30px;
+	}
+.box3-2-nei-shang{
+	height: 60px;
+	line-height: 60px;
+	border-bottom: 2px solid #CCCCCC;
+}
+.box3-2-nei-shang p{
+	font-size: 20px;
+	color: rgb(156,150,122);
+}
+.tubiao-span{
+	border: 5px solid rgb(156,150,122);
+	height: 25px;
+	display: inline-block;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom:-7px;
+	background-color:rgb(156,150,122) ;
+}
+.box3-2-nei-xia{
+	box-sizing: border-box;
+	padding: 50px;
+}
+/*#box3-2-nei-xia-zuo{
+	text-align: left !important;
+}*/
+.zuo{
+	line-height: 4em;
+}
+.zuo,.you,.zhong{
+/*	border: 1px solid red;*/
+	height: 200px;
+	
+}
+#guding-img{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	bottom:20px;
+	right: 0;
+}
+#guding-p{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+#zuo{
+	line-height: normal;
+}
+.box3-2-wai>.box3-2-nei-xia p{
+	text-align: center;
+}
+.box3-2-wai>.huiyuanquanyi img{
+	position: relative;
+	left: 50px;
+	/*text-align: center;
+	vertical-align: middle;*/
+	/*width: 100%;
+	height: 100%;*/
+}
+#huiyuanquanyi img{
+	width: 50px;
+	left: 70px;
+}
+#box3-1-zuo{
+	margin-left: 0px;
+}
+table{
+	width: 100%;
+	height: 500px;
+	border: 1px solid #C0A776;
+	text-align: center;
+}
+th{
+	text-align: center;
+	color:#C0A776 ;
+	background-color: rgb(227,220,207);
+}
+tr th:first-child{
+	background-color: rgb(240,237,231);
+}
+tr:first-of-type th:first-child{
+	background-color: rgb(227,220,207);
+}
+.yangshi{
+	/*width: 50%;*/
+	/*height: 500px;*/
+	padding-left: 0;
+	padding-right: 0;
+	/*border: 1px solid red;*/
+	box-sizing:  border-box;
+}
+.yangshi img{
+	width: 100%;
+	height: 550px;
+}
+.left{
+	padding: 50px;
+}
+.left>div{
+	line-height: 4.5em;
+}
+.left>div>p:first-of-type{
+	color:#C0A776 ;
+}
+.left>div>p:first-of-type span{
+	float: right;
+	color:gray;
+}
+.left>div>p:nth-of-type(2){
+	color:gray;
+}
+.left>div>h1>a{
+	color: black;
+	font-size: 25px;
+	font-weight: bolder;
+}
+.left>div>p:last-of-type>a{
+	color: gray;
+	text-decoration: underline;
+}
+@media only screen and (min-width: 100px) and (max-width: 640px) {
+	.box3-2-wai>.huiyuanquanyi img{
+		left:15px;
+	}
+#huiyuanquanyi img{
+	left: 15px;
+}
+#box3-1,#box3-2{
+	padding: 10px;
+}
+.left>div{
+	line-height: 1em;
+}
+.shenglue{
+	display: none;
+}
+.zuo, .you, .zhong {
+	height: 130px;
+	
+}
+.zuo{
+	line-height: 1.5em;
+}
+/*.box3-2-wai .box3-2-nei-shang p{
+	display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3; //显示文字的行数
+overflow: hidden;
+word-break: break-all;
+}*/
+.box3-2-wai>.huiyuanquanyi img{
+	position: relative;
+}
+.box3-2-wai>.huiyuanquanyi .dandu{
+	position: relative;
+}
+.left>div>p:nth-of-type(2){
+	line-height: 1.5em;
+	font-size: 12px;
+}
+.meiju-p{
+	font-size: 10px;
+}
+.yangshi img{
+	height: 300px;
+	
+}
+.box3-2-nei-shang p{
+	font-size: 16px;
+}
+.bigBox1{
+	height: 100px;
+}
+ .bigBox1 .carousel .carousel-inner .item{
+	height: 100px !important;
+}
+.box3-2-wai{
+	width: 98%;
+}
+table{
+	width: 100%;
+}
+}
+
+
+.dis{
+	display:none;
+}
+.box3-2-wai{
+	box-shadow:  0px 6px 18px gray;
+	
+	
+}
+.right{
+	overflow: hidden;
+}
+/*.box3-1-1:hover{
+	background-color: rgb(217,189,132);
+}*/
+/*.box3-2-nei-xia .zuo p:first-of-type {
+    text-align: left;
+}*/

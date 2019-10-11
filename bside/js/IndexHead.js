@@ -1,0 +1,125 @@
+$(function(){
+	$("#header-span").click(function(){
+		$("#headDiv").hide();
+		$("#head-divBlock").show();
+		$("#heade-imgNo").show();
+		$("#head-divBlock>input").animate({width:"100%"});
+	})
+	$("#heade-imgNo").click(function(){
+		$("#headDiv").show();
+		$("#heade-imgNo").hide();
+		$("#head-divBlock>input").animate({width:"0"});
+	});
+if($(document).width()>958){
+		$("#header-ul>li>a").mouseenter(function(){
+		$(this).children("span").show();
+	})
+		$("#header-ul>li>a").on("mouseenter",function(){
+		$(this).children("span").show();
+	})
+	$("#header-ul>li>a").mouseleave(function(){
+		$("#header-ul>li>a").children("span").hide();
+	})
+	$(".head-one").mouseenter(function(){
+		$("#headDiv").stop().animate({height:"220px"},500);
+		$("#header-ul2").show();
+		 $("#header-ul3").hide();
+	})
+	$(".head-one2").mouseenter(function(){
+		$("#headDiv").stop().animate({height:"220px"},500);
+		$("#header-ul3").show();
+		$("#header-ul2").hide();
+	})
+	$("#headDiv").mouseleave(function(){
+        $("#headDiv").animate({height:"90px"},500);
+        $("#header-ul2").hide();
+        $("#header-ul3").hide();
+	})
+	$("#header-ul2>li:first-child").mouseenter(function(){
+		$("#header-div2").css("display","block");
+		$("#header-div2s").css("display","none");
+		$(this).css("list-style","outside");
+		$("#header-ul2>li:nth-child(2)").css("list-style","none");
+	})
+	$("#header-ul2>li:nth-child(2)").mouseenter(function(){
+		$("#header-div2").css("display","none");
+		$("#header-div2s").css("display","block");
+		$(this).css("list-style","outside");
+		$("#header-ul2>li:first-child").css("list-style","none");
+	})
+	
+	$("#header-ul3>li:nth-child(1)").mouseenter(function(){
+		 $("#header-div3").css("display","block");
+		 $("#header-div3s").css("display","none");
+		 $("#header-div3ss").css("display","none");
+		 $(this).css("list-style","outside");
+		 $("#header-ul3>li:nth-child(2)").css("list-style","none");
+		 $("#header-ul3>li:nth-child(3)").css("list-style","none");
+	})
+	$("#header-ul3>li:nth-child(2)").mouseenter(function(){
+		 $("#header-div3").css("display","none");
+		 $("#header-div3s").css("display","block");
+		 $("#header-div3ss").css("display","none");
+		 $(this).css("list-style","outside");
+		 $("#header-ul3>li:nth-child(1)").css("list-style","none");
+		 $("#header-ul3>li:nth-child(3)").css("list-style","none");
+	})
+	$("#header-ul3>li:nth-child(3)").mouseenter(function(){
+		 $("#header-div3").css("display","none");
+		 $("#header-div3s").css("display","none");
+		 $("#header-div3ss").css("display","block");
+		 $(this).css("list-style","outside");
+		 $("#header-ul3>li:nth-child(1)").css("list-style","none");
+		 $("#header-ul3>li:nth-child(2)").css("list-style","none");
+	})
+}
+
+if($(document).width()<958){
+		$("#head_pingpaiSon").mouseenter(function(){
+		  $("#head_pingpai").animate({height:"100px"},500);
+		   $("#HPg-ul").show();	 
+		   $("#HPg-ul2").hide();	
+		})
+		$("#HPg-ul>li:nth-child(1)").mouseenter(function(){
+		 $(this).css("list-style","outside");
+		  $("#HPg-ul>li:nth-child(2)").css("list-style","none");
+		})
+		$("#HPg-ul>li:nth-child(2)").mouseenter(function(){
+		 $(this).css("list-style","outside");
+		  $("#HPg-ul>li:nth-child(1)").css("list-style","none");
+		})
+		$("#head_pingpaiSon").mouseleave(function(){
+		  $("#head_pingpai").animate({height:"70px"},500);
+			   
+		})
+	
+		$("#fuzSon").mouseenter(function(){
+		  $("#fuz").animate({height:"100px"},500);
+		  $("#HPg-ul2").show();	 
+		  $("#HPg-ul").hide();	 
+		})
+		$("#HPg-ul2>li:nth-child(1)").mouseenter(function(){
+		 $(this).css("list-style","outside");
+		  $("#HPg-ul>li:nth-child(2)").css("list-style","none");
+		  $("#HPg-ul2>li:nth-child(3)").css("list-style","none");
+		})
+		$("#HPg-ul2>li:nth-child(2)").mouseenter(function(){
+		 $(this).css("list-style","outside");
+		  $("#HPg-ul2>li:nth-child(1)").css("list-style","none");
+		  $("#HPg-ul2>li:nth-child(3)").css("list-style","none");
+		})
+		$("#HPg-ul2>li:nth-child(3)").mouseenter(function(){
+		 $(this).css("list-style","outside");
+		  $("#HPg-ul>li:nth-child(1)").css("list-style","none");
+		  $("#HPg-ul2>li:nth-child(2)").css("list-style","none");
+		})
+		$("#fuzSon").mouseleave(function(){
+		  $("#fuz").animate({height:"70px"},500);
+		   
+		})
+	}
+	
+
+	
+});
+	

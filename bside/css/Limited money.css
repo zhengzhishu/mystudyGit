@@ -1,0 +1,114 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.limited {
+	width: 100%;
+}
+@media only screen and (min-width: 100px) and (max-width: 640px) {
+.limited {
+	margin-top: -57px;
+}
+}
+nav {
+	height: 85px;
+}
+/*头部*/
+header .img {
+	/*position: relative;*/
+}
+header .img img {
+	/*height: 500px;*/
+	width: 100%;
+}
+header .text {
+	color: white;
+	position: absolute;
+	top: 40%;
+	right: 65%;
+	font-size: 20px;
+	font-weight: bold;
+}
+header h3 {
+	display: none;
+}
+/*小屏*/
+@media only screen and (min-width: 100px) and (max-width: 758px) {
+	header .text {
+		top: 12%;
+		font-size: 5px;
+	}
+	header h3 {
+		display: block;
+	}
+	header h1 {
+		display: none;
+	}
+}
+header .container {
+	font-size: 15px;
+}
+header .container a {
+	text-decoration: underline;
+	color: #000000;
+}
+/*正文部分*/
+section {
+	background-image: url(../img/11.png);
+	background-repeat: repeat;
+	width: 100%;
+	background-color: #ECECEC;
+}
+section .row {
+	background-color: white;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+section .container-2 {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+section .col-lg-12 p {
+	clear: both;
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+}
+section .container>.col-lg-12>div{
+	overflow: hidden;
+	height: auto;
+	position: relative;
+}
+section .container>.col-lg-12>div img{
+	width: 100%;
+}
+section .container>.col-lg-12>div p.name{
+	width: 100%;
+	line-height: 20px;
+}
+section  .bilok{
+	display: block;
+}
+section .hiide{
+  display: none;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 768px) {
+	section{
+		margin-top: 140px;
+	}
+	section .row {
+		margin: 5px;
+		margin: 20px;
+	}
+	section .container-2 {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	section img {
+		margin-top: 20px;
+	}
+}

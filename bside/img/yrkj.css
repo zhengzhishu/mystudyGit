@@ -1,0 +1,27 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+nav{
+	height: 86px;
+}
+/*第一部分*/
+header .container{
+	width: 100%;
+	padding: 0;
+}
+header .col-lg-12{
+	margin: 0 auto;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 640px) {
+	header .container img{
+		image-rendering: ;
+	}	
+}
+
+/*第三部分*/
+footer img{
+}
+

@@ -1,0 +1,201 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.limited {
+	width: 100%;
+}
+
+nav {
+	height: 85px;
+}
+/*头部*/
+header .img {
+	position: relative;
+}
+header .img img {
+	/*height: 500px;*/
+	width: 100%;
+}
+header .text {
+	color: white;
+	position: absolute;
+	top: 40%;
+	right: 65%;
+	font-size: 20px;
+	font-weight: bold;
+}
+header h3 {
+	display: none;
+}
+
+/*小屏*/
+@media only screen and (min-width: 100px) and (max-width: 758px) {
+	
+	header .text {
+		top: 10%;
+		font-size: 5px;
+	}
+	header h3 {
+		display: block;
+	}
+	header h1 {
+		display: none;
+	}
+}
+header .container {
+	font-size: 15px;
+}
+header .container a {
+	text-decoration: underline;
+	color: #000000;
+}
+section img{
+	width: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+section {
+	margin-top: 5px;
+	background-image: url(../img/11.png);
+	background-repeat: repeat;
+	width: 100%;
+	background-color: #ECECEC;
+	
+}
+ .row1 {
+	background-color: white;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+ .container-2 {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.col-lg-12 p {
+	clear: both;
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+}
+ .container>.col-lg-12>div{
+ 	text-align: center;
+	overflow: hidden;
+	height: auto;
+	position: relative;
+}
+ .container>.col-lg-12>div img{
+	width:100%;
+}
+ .container>.col-lg-12>div p.name{
+	width: 100%;
+	line-height: 20px;
+}
+ .bilok{
+	display: block;
+}
+ .hiide{
+  display: none;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 768px) {
+	section {
+		margin-top: 89px;
+	}
+	section .row {
+		margin: 5px;
+		margin: 20px;
+	}
+	.container>.col-lg-12>div img{
+	width:100%;
+}
+	section .container-2 {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	section img {
+		margin-top: 20px;
+	}
+	}
+	
+	
+	h1{
+		color: #CCCCCC;
+	}
+.top-p p{
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	background-color: #CCCCCC;
+	}
+.top-box.img{
+	height: 800px;
+	
+	
+}
+.top-i1{
+	width: 100%;
+}
+.top-boximg1{
+	overflow: hidden;
+}
+.top-boximg2{
+	overflow: hidden;
+}
+
+.top-boximg1 p{
+	text-align: center;
+	font-size:50px;
+	color: #CCCCCC;
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	display: block;
+}
+.top-boximg2 p{
+	margin-bottom: 50%;
+	text-align: center;
+	font-size:50px;
+	color: #CCCCCC;
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	display: block;
+}
+@media only screen and (min-width: 100px) and (max-width: 640px) {
+	.top-boximg1 p{
+	position: absolute;
+	top: 50%;
+	left: 35%;
+	font-size:20px;
+	}
+	.top-boximg2 p{
+		font-size:20px;
+	position: absolute;
+	top: 50%;
+	left: 25%;
+	}
+}
+
+.w-con{
+	margin-left: -14px;
+}
+@media only screen and (min-width: 100px) and (max-width: 640px) {
+	.w-con img{
+		width: 200px;
+	}
+}
