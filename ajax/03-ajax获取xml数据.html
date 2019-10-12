@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <h1> 点击按钮 改变内容</h1>
+</div>
+
+<button> 点击改变内容</button>
+
+<script>
+    var div = document.getElementsByTagName("div")[0];
+    var btn = document.getElementsByTagName("button")[0];
+
+    btn.onclick = function () {
+//   1、 创建对象
+        var htmlreq = new XMLHttpRequest();
+//   2、 发送请求
+        htmlreq.open("get","test/01-testXHTML.xml")
+        htmlreq.send();
+//   3、绑定方法 判断请求是否成功
+        htmlreq.onreadystatechange = function () {
+
+            if(htmlreq.readyState ==4 && htmlreq.status == 200){
+//                 用来获取xml文件的   xml 作为数据传输格式 有可能会遇见
+                var xmlText = htmlreq.responseXML;
+//              获取xml 的文本
+                console.log(xmlText.getElementsByTagName("h1")[0].childNodes[0].nodeValue);
+
+
+            }
+        }
+
+    }
+
+
+</script>
+</body>
+</html>

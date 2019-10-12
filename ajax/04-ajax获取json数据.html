@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <h1> 点击按钮 改变内容</h1>
+</div>
+
+<button> 点击改变内容</button>
+
+<script>
+    var div = document.getElementsByTagName("div")[0];
+    var btn = document.getElementsByTagName("button")[0];
+
+    btn.onclick = function () {
+//   1、 创建对象
+        var htmlreq = new XMLHttpRequest();
+//   2、 发送请求
+        htmlreq.open("get","test/01-testJSON.json")
+        htmlreq.send();
+//   3、绑定方法 判断请求是否成功
+        htmlreq.onreadystatechange = function () {
+
+            if(htmlreq.readyState ==4 && htmlreq.status == 200){
+//              JSON.parse() 将Json字符串转换为 Json对象
+//               JSON.stringfy()  将Json对象 转换为字符串
+                var jsonText = htmlreq.responseText;
+                var jsonObj = JSON.parse(jsonText);
+                console.log(jsonObj.compilerOptions.module);
+
+
+            }
+        }
+
+    }
+
+
+</script>
+</body>
+</html>

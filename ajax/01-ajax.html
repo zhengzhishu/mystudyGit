@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // 1、创建 ajax对象 XMLHttpRequest（）
+    var  xmlreq = new XMLHttpRequest()
+//    2、发送请求  get  post
+    xmlreq.open("get","test/01-testHtml.html");
+    xmlreq.send();  // 是post才会给参数
+// 3、 绑定onreadystatechange 事件  服务器每当反应一次数据 都会 触发一次 绑定onreadystatechange
+    xmlreq.onreadystatechange = function () {
+//        存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。
+// 0: 请求未初始化
+// 1: 服务器连接已建立
+// 2: 请求已接收
+// 3: 请求处理中
+// 4: 请求已完成，且响应已就绪
+
+        /*if(xmlreq.readyState ==0){
+            alert("请求未初始化"+xmlreq.readyState)
+        } else if(xmlreq.readyState ==1){
+            alert("服务器连接已建立"+xmlreq.readyState)
+        }else if(xmlreq.readyState ==2){
+            alert("请求已接收"+xmlreq.readyState)
+        }else if(xmlreq.readyState ==3){
+            alert("请求处理中"+xmlreq.readyState)
+        }else if(xmlreq.readyState ==4){
+            alert("请求已完成"+xmlreq.readyState)
+        }
+        if(xmlreq.status ==200){
+            alert("ok")
+        }*/
+
+        if(xmlreq.readyState ==4 && xmlreq.status==200){
+//          获取数据
+            var text = xmlreq.responseText;
+            console.log(text);
+
+        }
+
+    }
+
+
+
+</script>
+</body>
+</html>

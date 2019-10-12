@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <h1> 点击按钮 改变内容</h1>
+</div>
+
+<button> 点击改变内容</button>
+
+<script>
+    var div = document.getElementsByTagName("div")[0];
+    var btn = document.getElementsByTagName("button")[0];
+
+    btn.onclick = function () {
+//   1、 创建对象
+        var htmlreq = new XMLHttpRequest();
+//   2、 发送请求
+        htmlreq.open("get","test/01-testHtml.html")
+        htmlreq.send();
+//   3、绑定方法 判断请求是否成功
+        htmlreq.onreadystatechange = function () {
+
+        if(htmlreq.readyState ==4 && htmlreq.status == 200){
+            //   4、获取数据
+            var text = htmlreq.responseText;
+            // 找到body的位置
+            var  firstIndex = text.indexOf("<body>");
+            var  lastIndex = text.indexOf("</body>");
+            //            截取html中的内容
+            var str = text.substring(firstIndex+6,lastIndex).trim();
+            // 添加内容到html中
+            div.innerHTML = str;
+
+            }
+        }
+
+    }
+
+
+</script>
+</body>
+</html>

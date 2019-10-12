@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            border:1px solid #cccccc;
+        }
+        table{
+            width: 100%;
+            border-collapse:collapse;
+        }
+    </style>
+</head>
+<body>
+<table cellpadding="0" cellspacing="0">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>username</th>
+        <th>email</th>
+        <th>phone</th>
+        <th>website</th>
+    </tr>
+</table>
+<script>
+    window.onload = function () {
+        var table = document.querySelector("table");
+//         创建对象
+        var htmlreq = new XMLHttpRequest();
+//        发送请求
+        htmlreq.open("get","http://jsonplaceholder.typicode.com/users");
+        htmlreq.send();
+//        绑定事件 
+        htmlreq.onreadystatechange = function () {
+//             判断请求是否完成
+            if(htmlreq.readyState ==4 && htmlreq.status ==200){
+//                    获取数据
+                var jsonObj =JSON.parse(htmlreq.responseText) ;
+//                循环遍历数组 拿到每一个对象
+                for(var i = 0;i<jsonObj.length;i++){
+                var tr = document.createElement("tr");
+                tr.innerHTML = "<tr> <td>"+jsonObj[i].id+"</td> <td>"+jsonObj[i].name+"</td></tr>";
+                    table.appendChild(tr);
+                }
+            }
+        }
+    }
+
+</script>
+
+
+</body>
+</html>
